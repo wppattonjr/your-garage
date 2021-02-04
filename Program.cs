@@ -1,5 +1,7 @@
 ﻿using System;
 using YourGarage.Cars;
+using YourGarage.Aircrafts;
+using YourGarage.Watercrafts;
 
 namespace YourGarage
 {
@@ -9,12 +11,24 @@ namespace YourGarage
         {
             var car = new Car();
             car.PassengerOccupancy = 5;
-            car.FuelType = FuelType.Gasoline;
-            car.Color = Color.Blue;
+            car.FuelType = FuelType.gasoline;
+            car.Color = Color.blue;
 
             car.Refueling();
             car.Driving();
             car.Braking();
+
+            var airplane = new Airplane();
+            airplane.PassengerOccupancy = 250;
+            airplane.Refueling();
+            airplane.Flying();
+            airplane.Landing();
+
+            var boat = new Boat();
+            boat.PassengerOccupancy = 35;
+            boat.Refueling();
+            boat.Driving();
+
 
         }
     }
